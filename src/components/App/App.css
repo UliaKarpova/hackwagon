@@ -1,6 +1,10 @@
 @import url(../../vendor/normalize.css);
 @import url(../../vendor/fonts.css);
 
+html {
+  background: var(--Cyan-100);
+}
+
 .App {
   width: 100%;
   font-family: 'Inter', 'Arial', sans-serif;
