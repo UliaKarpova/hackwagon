@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './App.css';
+import Table from '../Table/Table';
 import FormWithValidation from '../FormWithValidation';
-import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { Route, Switch } from 'react-router-dom';
+
 import { auth, getUserInfo, getUsers } from '../../utils/AuthApi';
 import StartPage from '../StartPage/StartPage';
 
@@ -49,6 +51,8 @@ function App() {
 
   return (
     <div className="App">
+      <Switch>
+        <Route exact path='/'>
       <StartPage />
       <form className='form' onSubmit={onSubmit}>
         <h2 className='form__title'>Авторизация</h2>
@@ -58,6 +62,11 @@ function App() {
         <input id='password' onChange={onChange} name='password' className='form__password' type='password' />
         <button type='submit' className='form__button'>Отправить</button>
       </form>
+      </Route>
+      <Route path='/table'>
+        <Table />
+      </Route>
+      </Switch>
     </div>
   );
 }
