@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import FormWithValidation from '../FormWithValidation';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
@@ -56,6 +57,7 @@ function Login() {
         <input id='password' onChange={onChange} name='password' className='form-input form__password' type='password' />
         <button type='submit' className='form__button'>Отправить</button>
       </form>
+      <Link to="/workpage" className="link__to-page">Начать инвентаризацию</Link>
     </div>
   );
 }

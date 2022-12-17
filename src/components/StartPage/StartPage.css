@@ -1,44 +1,40 @@
 .start-page {
   height: 100%;
-  background: none repeat scroll 0 0 var(--Blue-400);
   color: var(--Yellow-300);
   padding: 12px;
-  font-family: Helvetica;
-  display: block;
+  font-family: 'Inter';
+
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-.page-container {
-  /* position: absolute;
-  top: 50%; */
+.page__container {
   width: 400px;
   margin: 0 auto;
+
 }
 
-.page-title {
+.page__title {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
   line-height: 58px;
   text-align: center;
-  /* color: #FFFFFF; */
 }
 
-.page-but {
+.page__link {
+  text-align: center;
+}
+
+.page__but {
   width: 70px;
   height: 70px;
   border-radius: 35px;
+  margin: 40px auto;
   background-color: var(--Orange-300);
-  /* margin: 0 auto; */
-  /* margin-left: 155px; */
   cursor: pointer;
+}
+
+
+.page__but:hover {
+  background-color: var(--Orange-100);
 }

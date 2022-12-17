@@ -1,0 +1,25 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px;
+}
+
+.header__logo {
+  cursor: pointer;
+}
+
+.header__logo:hover {
+  opacity: .8;
+}
+
+.header__btn {
+  width: 100px;
+  height: 46px;
+  background-color: var(--Orange-300);
+  color: #fff;
+  cursor: pointer;
+}
+
+.header__btn:hover {
+  opacity: .8;
+}
