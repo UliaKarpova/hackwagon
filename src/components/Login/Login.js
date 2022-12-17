@@ -56,8 +56,8 @@ function Login() {
         <label htmlFor='password' className='form__label'>Пароль</label>
         <input id='password' onChange={onChange} name='password' className='form-input form__password' type='password' />
         <button type='submit' className='form__button'>Отправить</button>
+        <Link to="/workpage" className="link__to-page">Начать инвентаризацию</Link>
       </form>
-      <Link to="/workpage" className="link__to-page">Начать инвентаризацию</Link>
     </div>
   );
 }
