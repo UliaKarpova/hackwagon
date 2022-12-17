@@ -5,7 +5,7 @@ import StartPage from '../StartPage/StartPage';
 import Login from '../Login/Login';
 import SnowFall from '../Snowfall/SnowFall';
 import Header from '../Header/Header';
-import WorkPage from '../WorkPage/WorkPage';
+// import WorkPage from '../WorkPage/WorkPage';
 
 function App() {
   return (
@@ -19,14 +19,14 @@ function App() {
         <Header />
         <Login />
       </Route>
-      <Route path="/workpage">
+      {/* <Route path="/workpage">
         <Header>
           <NavLink to="/">
             <button className="header__btn">Назад</button>
           </NavLink>
         </Header>
         <WorkPage />
-      </Route>
+      </Route> */}
     </Switch>
   ); 
 }
