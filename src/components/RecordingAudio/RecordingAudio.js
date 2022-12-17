@@ -1,4 +1,4 @@
-const recordAudio = () => {
+export const recordAudio = () => {
   return new Promise(resolve => {
     navigator.mediaDevices.getUserMedia({ audio: true })
       .then(stream => {
