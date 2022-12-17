@@ -1,6 +1,10 @@
 import React from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import './App.css';
+import Table from '../Table/Table';
+import FormWithValidation from '../FormWithValidation';
+
+import { auth, getUserInfo, getUsers } from '../../utils/AuthApi';
 import StartPage from '../StartPage/StartPage';
 import Login from '../Login/Login';
 import SnowFall from '../Snowfall/SnowFall';
@@ -9,6 +13,8 @@ import WorkPage from '../WorkPage/WorkPage';
 
 function App() {
   return (
+      <div className="App">
+
     <Switch>
       <Route exact path="/">
         <Header />
@@ -27,8 +33,14 @@ function App() {
         </Header>
         <WorkPage />
       </Route>
+      <Route path='/table'>
+        <Table />
+      </Route>
     </Switch>
   ); 
+
+    </div>
+  );
 }
 
 export default App;
