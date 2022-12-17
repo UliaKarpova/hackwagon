@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Table } from "react-bootstrap";
 import { PencilFill, Save, Trash, XSquare } from 'react-bootstrap-icons';
+import { ExportReactCSV } from '../ExportReactCSV/ExportReactCSV';
+
 import './EditableTable.css';
 
 
@@ -44,14 +46,13 @@ const EditableTable = ({ columns, rows, actions }) => {
 
       const newData = rowsState.map(row => {
         if (row.id === editedRow.id) {
-          if (editedRow.nameOfProduct) row.nameOfProduct = editedRow.nameOfProduct;
+          if (editedRow.name) row.name = editedRow.name;
           if (editedRow.number) row.number = editedRow.number;
           if (editedRow.year) row.year = editedRow.year;
           if (editedRow.factory) row.factory = editedRow.factory;
-          if (editedRow.comments) row.comments = editedRow.comments;
+          if (editedRow.comment) row.comment = editedRow.comment;
 
         }
-
         return row;
       })
 
@@ -60,7 +61,18 @@ const EditableTable = ({ columns, rows, actions }) => {
     }, 1000)
   }
 
+
+  const dataArr = () => {
+    let content = [];
+    for (let i = 0; i < rowsState.length; i++) {
+      content += rowsState[i].id + ";" + rowsState[i].name+ ";" + rowsState[i].number+ ";" + rowsState[i].year + ";" + 
+      rowsState[i].factory+ ";" + rowsState[i].comment + "\n" 
+  }
+  return content;
+}
+
   return (
+    <>
     <Table striped bordered hover>
       <thead>
       <tr>
@@ -80,12 +92,12 @@ const EditableTable = ({ columns, rows, actions }) => {
               ? <Form.Control
                 className='form'
                 type='text'
-                defaultValue={editedRow ? editedRow.nameOfProduct : row.nameOfProduct}
+                defaultValue={editedRow ? editedRow.name : row.name}
                 id={row.id}
-                name='nameOfProduct'
+                name='name'
                 onChange={ (e) => handleOnChangeField(e, row.id) }
               />
-              : row.nameOfProduct
+              : row.name
             }
           </td>
           <td>
@@ -135,12 +147,12 @@ const EditableTable = ({ columns, rows, actions }) => {
                 type='text'
                 className='form'
 
-                defaultValue={editedRow ? editedRow.comments : row.comments}
+                defaultValue={editedRow ? editedRow.comment : row.comment}
                 id={row.id}
-                name='comments'
+                name='comment'
                 onChange={ (e) => handleOnChangeField(e, row.id) }
               />
-              : row.comments
+              : row.comment
             }
           </td>
           {actions &&
@@ -168,7 +180,15 @@ const EditableTable = ({ columns, rows, actions }) => {
       })}
       </tbody>
     </Table>
+    <div className='tible__buttons'>
+    <button type='submit' className='table__save'>Сохранить изменения</button>
+    <div className="col-md-4 center">
+        <ExportReactCSV csvData={dataArr()} fileName='Report'/>
+    </div>           
+</div>
+</>
   );
 };
+
 
 export default EditableTable;

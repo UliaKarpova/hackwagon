@@ -57,21 +57,23 @@ td {
       font-size: 14px;
       margin-right: 45px;
       width: 200px;
+      border-radius: 15px;
   }
 
   .download {
     cursor: pointer;
     height: 40px;
-    text-decoration: none;
     background-color: #1c07a4;
     width: 200px;
+    border-radius: 15px;
   }
 
   .download:hover {
       background-color: rgba(28, 7, 164, 0.7);
   }
   .download__link {
-    color: #EDE200;
+    color: white;
     font-size: 14px;
+    text-decoration: none;
 
   }
