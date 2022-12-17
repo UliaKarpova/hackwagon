@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import FormWithValidation from './components/FormWithValidation';
-import { CurrentUserContext } from './contexts/CurrentUserContext';
-import { auth, getUserInfo, getUsers } from './utils/AuthApi';
-
+import FormWithValidation from '../FormWithValidation';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import { auth, getUserInfo, getUsers } from '../../utils/AuthApi';
+import StartPage from '../StartPage/StartPage';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -49,6 +49,7 @@ function App() {
 
   return (
     <div className="App">
+      <StartPage />
       <form className='form' onSubmit={onSubmit}>
         <h2 className='form__title'>Авторизация</h2>
         <label htmlFor='phone' className='form__label'>Телефон</label>

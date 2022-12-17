@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  /* Gradation */
+  --Gradation-700: #0C0D0D;
+  --Gradation-600: #242728;
+  --Gradation-500: #494E50;
+  --Gradation-400: #798286;
+  --Gradation-300: #AFB4B6;
+  --Gradation-200: #EFF0F0;
+  --Gradation-100: #FCFCFD;
+  /* Orange */
+  --Orange-500: #9A6000;
+  --Orange-400: #B17F2C;
+  --Orange-300: #ED9400;
+  --Orange-200: #F6B13D;
+  --Orange-100: #F6C36F;
+  /* Blue */
+  --Blue-500: #11026B;
+  --Blue-400: #1c07a4;
+  --Blue-300: #2F237B;
+  --Blue-200: #503BD2;
+  --Blue-100: #7263D2;
+
+  /* Cyan */
+  --Cyan-300: #164F64;
+  --Cyan-200: #BED4DC;
+  --Cyan-100: #DEE9ED;
+  /* Yellow */
+  --Yellow-500: #9A9300;
+  --Yellow-400: #B1AC2C;
+  --Yellow-300: #EDE200;
+  --Yellow-200: #F6EE3D;
+  --Yellow-100: #F6F06F;
+  /* Tint */
+  --Tint-Heavy: rgba(12, 13, 13, 0.6);
+  --Tint-Light: rgba(12, 13, 13, 0.3);
+  /* Highlight */
+  --Highlight-Heavy: rgba(242, 242, 243, 0.1);
+  --Highlight-Light: rgba(242, 242, 243, 0.05);
+  /* Spacing */
+  --Spacing-Size: rgba(255, 2, 2, 0.3);
+  --Spacing-Text: rgba(255, 2, 2, 0.1);
+  --Spacing-Background: rgba(255, 2, 2, 0.03);
+}
