@@ -1,22 +1,30 @@
 .login__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   width: 396px;
   padding: 70px 0;
   margin: 0 auto;
 }
 
-.form-title {
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__title {
   margin: 0;
   padding-bottom: 40px;
-  text-align: start;
+  text-align: center;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: var(--Yellow-300);
+}
+
+.form__label {
+  color: #fff;
+  align-items: flex-start;
 }
 
 .form-input {
@@ -29,9 +37,23 @@
 }
 
 .form__button {
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-top: 40px;
   background-color: var(--Orange-300);
+  color: #fff;
   cursor: pointer;
+}
+
+.link__to-page {
+  text-decoration: none;
+  color: var(--Cyan-200);
+  font-style: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.link__to-page:hover {
+  opacity: .7;
 }

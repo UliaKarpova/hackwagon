@@ -1,0 +1,13 @@
+.work__page {
+  padding: 40px 40px;
+}
+
+.w-page__button {
+  width: 100%;
+  height: 46px;
+  margin: 10px 0 20px;
+  background: var(--Cyan-100);
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+}
