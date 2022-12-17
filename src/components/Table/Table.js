@@ -44,11 +44,11 @@ function Table() {
       ];
     
       return (
-          <>
-            <div className="start-page">
-                <h1 className="page-title">Лесная   инвентаризация</h1>
-            </div>
-            <EditableTable columns={columns} rows={data} actions />
+        <>
+          <div className="start-page">
+              <h1 className="page-title">Лесная   инвентаризация</h1>
+          </div>
+          <EditableTable columns={columns} rows={data} actions />
             
         </>
 
