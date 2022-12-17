@@ -13,32 +13,29 @@ import WorkPage from '../WorkPage/WorkPage';
 
 function App() {
   return (
-      <div className="App">
-
-    <Switch>
-      <Route exact path="/">
-        <Header />
-        <SnowFall />
-        <StartPage />
-      </Route>
-      <Route path="/signin">
-        <Header />
-        <Login />
-      </Route>
-      <Route path="/workpage">
-        <Header>
-          <NavLink to="/">
-            <button className="header__btn">Назад</button>
-          </NavLink>
-        </Header>
-        <WorkPage />
-      </Route>
-      <Route path='/table'>
-        <Table />
-      </Route>
-    </Switch>
-  ); 
-
+    <div className="App">
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <SnowFall />
+          <StartPage />
+        </Route>
+        <Route path="/signin">
+          <Header />
+          <Login />
+        </Route>
+        <Route path="/workpage">
+          <Header>
+            <NavLink to="/">
+              <button className="header__btn">Назад</button>
+            </NavLink>
+          </Header>
+          <WorkPage />
+        </Route>
+        <Route path='/table'>
+          <Table />
+        </Route>
+      </Switch> 
     </div>
   );
 }

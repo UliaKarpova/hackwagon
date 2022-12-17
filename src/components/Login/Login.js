@@ -49,7 +49,7 @@ function Login() {
 
   return (
     <div className="login__container">
-      <form className='form' onSubmit={onSubmit}>
+      <form className='form__login' onSubmit={onSubmit}>
         <h2 className='form__title'>Авторизация</h2>
         <label htmlFor='phone' className='form__label'>Телефон</label>
         <input id='phone' onChange={onChange} name='phone' className='form-input form__phone' type='tel' />

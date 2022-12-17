@@ -1,3 +1,6 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Table.css';
 import EditableTable from "../EditableTable/index";
 
 function Table() {
@@ -45,8 +48,11 @@ function Table() {
     
       return (
         <>
-          <div className="start-page">
-              <h1 className="page-title">Лесная   инвентаризация</h1>
+          <div className="table__page">
+            <h1 className="table__title">Просмотр и редактирование</h1>
+            <NavLink to="/">
+              <button className="table__btn">Назад</button>
+            </NavLink>
           </div>
           <EditableTable columns={columns} rows={data} actions />
             

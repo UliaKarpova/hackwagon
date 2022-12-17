@@ -8,7 +8,7 @@ function WorkPage() {
       <NavLink to="#" >
         <button type='button' className='w-page__button'>Загрузить данные</button>
       </NavLink>
-      <NavLink to="#" >
+      <NavLink to="/table" >
         <button type='button' className='w-page__button'>Предварительный просмотр</button>
       </NavLink>
       <NavLink to="#" >

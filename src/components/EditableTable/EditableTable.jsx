@@ -67,126 +67,126 @@ const EditableTable = ({ columns, rows, actions }) => {
     for (let i = 0; i < rowsState.length; i++) {
       content += rowsState[i].id + ";" + rowsState[i].name+ ";" + rowsState[i].number+ ";" + rowsState[i].year + ";" + 
       rowsState[i].factory+ ";" + rowsState[i].comment + "\n" 
+    }
+    return content;
   }
-  return content;
-}
 
   return (
     <>
-    <Table striped bordered hover>
-      <thead>
-      <tr>
-        {columns.map((column) => {
-          return <th key={column.field}>{ column.fieldName }</th>
-        })}
-      </tr>
-      </thead>
-      <tbody>
-      {rowsState.map((row) => {
-        return <tr key={row.id}>
-          <td>
-            {row.id}
-          </td>
-          <td>
-            { isEditMode && rowIDToEdit === row.id
-              ? <Form.Control
-                className='form'
-                type='text'
-                defaultValue={editedRow ? editedRow.name : row.name}
-                id={row.id}
-                name='name'
-                onChange={ (e) => handleOnChangeField(e, row.id) }
-              />
-              : row.name
-            }
-          </td>
-          <td>
-            { isEditMode && rowIDToEdit === row.id
-              ? <Form.Control
-              className='form'
-                type='text'
-                defaultValue={editedRow ? editedRow.number : row.number}
-                id={row.id}
-                name='number'
-                onChange={ (e) => handleOnChangeField(e, row.id) }
-              />
-              : row.number
-            }
-          </td>
-          <td>
-          { isEditMode && rowIDToEdit === row.id
-              ? <Form.Control
-              className='form'
-
-                type='text'
-                defaultValue={editedRow ? editedRow.year : row.year}
-                id={row.id}
-                name='year'
-                onChange={ (e) => handleOnChangeField(e, row.id) }
-              />
-              : row.year
-            }
-          </td>
-          <td>
-          { isEditMode && rowIDToEdit === row.id
-              ? <Form.Control
-                type='text'
-                className='form'
-
-                defaultValue={editedRow ? editedRow.factory : row.factory}
-                id={row.id}
-                name='factory'
-                onChange={ (e) => handleOnChangeField(e, row.id) }
-              />
-              : row.factory
-            }
-          </td>
-          <td>
-          { isEditMode && rowIDToEdit === row.id
-              ? <Form.Control
-                type='text'
-                className='form'
-
-                defaultValue={editedRow ? editedRow.comment : row.comment}
-                id={row.id}
-                name='comment'
-                onChange={ (e) => handleOnChangeField(e, row.id) }
-              />
-              : row.comment
-            }
-          </td>
-          {actions &&
-          <td>
-            { isEditMode && rowIDToEdit === row.id
-              ? <button onClick={ () => handleSaveRowChanges() } className='custom-table__action-btn' disabled={!editedRow}>
-                <Save />
-              </button>
-              : <button  onClick={ () => handleEdit(row.id) } className='custom-table__action-btn'>
-                <PencilFill />
-              </button>
-            }
-
-            { isEditMode && rowIDToEdit === row.id
-              ? <button onClick={() => handleCancelEditing()} className='custom-table__action-btn'>
-                <XSquare />
-              </button>
-              : <button onClick={() => handleRemoveRow(row.id)} className='custom-table__action-btn'>
-                <Trash />
-              </button>
-            }
-          </td>
-          }
+      <Table striped bordered hover>
+        <thead>
+        <tr>
+          {columns.map((column) => {
+            return <th key={column.field}>{ column.fieldName }</th>
+          })}
         </tr>
-      })}
-      </tbody>
-    </Table>
-    <div className='tible__buttons'>
-    <button type='submit' className='table__save'>Сохранить изменения</button>
-    <div className="col-md-4 center">
-        <ExportReactCSV csvData={dataArr()} fileName='Report'/>
-    </div>           
-</div>
-</>
+        </thead>
+        <tbody className="tab__body">
+        {rowsState.map((row) => {
+          return <tr key={row.id}>
+            <td>
+              {row.id}
+            </td>
+            <td>
+              { isEditMode && rowIDToEdit === row.id
+                ? <Form.Control
+                  className='form'
+                  type='text'
+                  defaultValue={editedRow ? editedRow.name : row.name}
+                  id={row.id}
+                  name='name'
+                  onChange={ (e) => handleOnChangeField(e, row.id) }
+                />
+                : row.name
+              }
+            </td>
+            <td>
+              { isEditMode && rowIDToEdit === row.id
+                ? <Form.Control
+                className='form'
+                  type='text'
+                  defaultValue={editedRow ? editedRow.number : row.number}
+                  id={row.id}
+                  name='number'
+                  onChange={ (e) => handleOnChangeField(e, row.id) }
+                />
+                : row.number
+              }
+            </td>
+            <td>
+            { isEditMode && rowIDToEdit === row.id
+                ? <Form.Control
+                className='form'
+
+                  type='text'
+                  defaultValue={editedRow ? editedRow.year : row.year}
+                  id={row.id}
+                  name='year'
+                  onChange={ (e) => handleOnChangeField(e, row.id) }
+                />
+                : row.year
+              }
+            </td>
+            <td>
+            { isEditMode && rowIDToEdit === row.id
+                ? <Form.Control
+                  type='text'
+                  className='form'
+
+                  defaultValue={editedRow ? editedRow.factory : row.factory}
+                  id={row.id}
+                  name='factory'
+                  onChange={ (e) => handleOnChangeField(e, row.id) }
+                />
+                : row.factory
+              }
+            </td>
+            <td>
+            { isEditMode && rowIDToEdit === row.id
+                ? <Form.Control
+                  type='text'
+                  className='form'
+
+                  defaultValue={editedRow ? editedRow.comment : row.comment}
+                  id={row.id}
+                  name='comment'
+                  onChange={ (e) => handleOnChangeField(e, row.id) }
+                />
+                : row.comment
+              }
+            </td>
+            {actions &&
+            <td>
+              { isEditMode && rowIDToEdit === row.id
+                ? <button onClick={ () => handleSaveRowChanges() } className='custom-table__action-btn' disabled={!editedRow}>
+                  <Save />
+                </button>
+                : <button  onClick={ () => handleEdit(row.id) } className='custom-table__action-btn'>
+                  <PencilFill />
+                </button>
+              }
+
+              { isEditMode && rowIDToEdit === row.id
+                ? <button onClick={() => handleCancelEditing()} className='custom-table__action-btn'>
+                  <XSquare />
+                </button>
+                : <button onClick={() => handleRemoveRow(row.id)} className='custom-table__action-btn'>
+                  <Trash />
+                </button>
+              }
+            </td>
+            }
+          </tr>
+        })}
+        </tbody>
+      </Table>
+      <div className='tible__buttons'>
+        <button type='submit' className='table__save'>Сохранить изменения</button>
+        <div className="col-md-4 center">
+            <ExportReactCSV csvData={dataArr()} fileName='Report'/>
+        </div>           
+      </div>
+    </>
   );
 };
 

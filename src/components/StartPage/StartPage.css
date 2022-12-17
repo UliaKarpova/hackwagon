@@ -1,7 +1,7 @@
 .start-page {
   height: 100%;
   color: var(--Yellow-300);
-  padding: 12px;
+  /* padding: 12px; */
   font-family: 'Inter';
 }
 
