@@ -8,6 +8,7 @@ import Register from '../Pages/Register/Register';
 import SnowFall from '../Snowfall/SnowFall';
 import Header from '../Header/Header';
 import WorkPage from '../Pages/WorkPage/WorkPage';
+import RecordContainer from '../Audio/RecordContainer/RecordContainer';
 
 function App() {
   return (
@@ -41,6 +42,14 @@ function App() {
             </NavLink>
           </Header>
           <WorkPage />
+        </Route>
+        <Route path="/recording">
+          <Header>
+            <NavLink to="/workpage">
+              <button className="header__btn">Назад</button>
+            </NavLink>
+          </Header>
+          <RecordContainer />
         </Route>
         <Route path='/table'>
           <Table />

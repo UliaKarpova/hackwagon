@@ -7,6 +7,9 @@ function WorkPage() {
   return (
     <div className="work__page">
       <h1 className="w-page__title">Привет! Пора за работу!</h1>
+      <NavLink to="/recording" >
+        <button type='button' className='w-page__button'>Голосовой ввод данных</button>
+      </NavLink>
       <NavLink to="#" >
         <button type='button' className='w-page__button'>Загрузить данные</button>
       </NavLink>

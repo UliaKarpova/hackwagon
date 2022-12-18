@@ -1,0 +1,19 @@
+.rec-cont {}
+
+.rec-cont__title {
+  color: var(--Yellow-300);
+  padding: 50px 50px;
+  margin: 0;
+}
+
+.rec-cont__btn {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #fff;
+  border-radius: 150px;
+  background-color: rgb(232, 7, 7);
+  color: #fff;
+  font-size: 50px;
+  line-height: 58px;
+
+}
