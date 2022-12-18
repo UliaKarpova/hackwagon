@@ -2,7 +2,6 @@ const BASE_URL = 'http://localhost:8080';
 const jwt = localStorage.getItem('token');
 
 const getResponseData = (res) => {
-    console.log(res);
     if (res.ok) {
         return res.json();
     } else {
@@ -27,7 +26,6 @@ const getResponseData = (res) => {
 }*/
 
 export const auth = (data) => {
-    console.log(data);
     return fetch(`${BASE_URL}/auth/sign-in`, {
         method: 'POST',
         headers: {
@@ -38,6 +36,7 @@ export const auth = (data) => {
         .then((data) => {
             if (data.accessToken) {
                 localStorage.setItem('token', data.accessToken);
+                localStorage.setItem('refresh', data.refreshToken);
                 return data;
             }
         }).catch((err) => {
@@ -58,8 +57,7 @@ export const getUserInfo = () => {
         return typeof err !== 'string' ? Promise.reject('Ошибка подключения') : Promise.reject(err);
     })}
 
-
-    export const getUsers = () => {
+    /*export const getUsers = () => {
         return fetch(`${BASE_URL}/admin/users`, {
             method: 'GET',
             headers: {
@@ -69,4 +67,4 @@ export const getUserInfo = () => {
         }).then(getResponseData)
         .catch((err) => {
             return typeof err !== 'string' ? Promise.reject('Ошибка подключения') : Promise.reject(err);
-        })}
+        })}*/
