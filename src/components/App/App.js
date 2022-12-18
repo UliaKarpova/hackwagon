@@ -20,8 +20,8 @@ function App() {
         </Route>
         <Route path="/signin">
           <Header>
-            <NavLink to="/">
-              <button className="header__btn">Выйти</button>
+            <NavLink to="/signup">
+              <button className="header__btn">Назад</button>
             </NavLink>
           </Header>
           <Login />
