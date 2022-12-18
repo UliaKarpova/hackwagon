@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Form, Table } from "react-bootstrap";
 import { PencilFill, Save, Trash, XSquare } from 'react-bootstrap-icons';
 import { ExportReactCSV } from '../ExportReactCSV/ExportReactCSV';
+import { getProducts, getProductsCSV } from '../../utils/MainApi';
 
 import './EditableTable.css';
 
 
-const EditableTable = ({ columns, rows, actions }) => {
+const EditableTable = ({ columns, rows, actions, getProducts }) => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [rowIDToEdit, setRowIDToEdit] = useState(undefined);
   const [rowsState, setRowsState] = useState(rows);
@@ -60,6 +61,8 @@ const EditableTable = ({ columns, rows, actions }) => {
       setEditedRow(undefined)
     }, 1000)
   }
+
+
 
 
   const dataArr = () => {
@@ -182,9 +185,11 @@ const EditableTable = ({ columns, rows, actions }) => {
     </Table>
     <div className='tible__buttons'>
     <button type='submit' className='table__save'>Сохранить изменения</button>
+
+
     <div className="col-md-4 center">
         <ExportReactCSV csvData={dataArr()} fileName='Report'/>
-    </div>           
+    </div>  
 </div>
 </>
   );

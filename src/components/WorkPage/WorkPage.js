@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import ".WorkPage.css";
+import "./WorkPage.css";
 
 function WorkPage() {
   return (
@@ -17,4 +17,4 @@ function WorkPage() {
     </div>
   );
 }
-export default WorkPage
+export default WorkPage;

@@ -1,6 +1,13 @@
+import { useState, useEffect } from "react";
+
 import EditableTable from "../EditableTable/index";
+import { getProducts } from '../../utils/MainApi';
+
 
 function Table() {
+  const [data, setData] = useState([]);
+
+
     const columns = [
         { field: 'id', fieldName: 'Номер записи' },
         { field: 'name', fieldName: 'Наименование детали' },
@@ -10,7 +17,17 @@ function Table() {
         { field: 'comment', fieldName: 'Комментарий' },
       ];
     
-      const data = [
+      useEffect(() => {
+        getAllProducts();
+      }, [])
+      function getAllProducts () {
+        getProducts()
+        .then((res) => {
+          console.log(res);
+          setData(res);
+        }).catch((err) => console.log(err))
+      }
+      /*const data = [
         { id: 1, name: 'колёсная пара', number: '123456', year: '1994', factory: '05', comment: 'брак'},
         { id: 2, name: 'колёсная пара', number: '123456', year: '1994', factory: '05', comment: 'брак'},
         { id: 3, name: 'колёсная пара', number: '123456', year: '1994', factory: '05', comment: 'брак'},
@@ -41,16 +58,16 @@ function Table() {
         { id: 28, name: 'колёсная пара', number: '123456', year: '1994', factory: '05', comment: 'брак'},
         { id: 29, name: 'колёсная пара', number: '123456', year: '1994', factory: '05', comment: 'брак'},
         { id: 30, name: 'колёсная пара', number: '123456', year: '1994', factory: '05', comment: 'брак'},
-      ];
+      ];*/
     
       return (
-          <>
+          <div className="table__container">
             <div className="start-page">
                 <h1 className="page-title">Лесная   инвентаризация</h1>
             </div>
             <EditableTable columns={columns} rows={data} actions />
             
-        </>
+        </div>
 
       );
 }

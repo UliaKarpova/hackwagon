@@ -2,9 +2,7 @@ import React from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import './App.css';
 import Table from '../Table/Table';
-import FormWithValidation from '../FormWithValidation';
 
-import { auth, getUserInfo, getUsers } from '../../utils/AuthApi';
 import StartPage from '../StartPage/StartPage';
 import Login from '../Login/Login';
 import SnowFall from '../Snowfall/SnowFall';
@@ -18,7 +16,7 @@ function App() {
     <Switch>
       <Route exact path="/">
         <Header />
-        <SnowFall />
+        {/*<SnowFall />*/}
         <StartPage />
       </Route>
       <Route path="/signin">
@@ -37,8 +35,6 @@ function App() {
         <Table />
       </Route>
     </Switch>
-  ); 
-
     </div>
   );
 }

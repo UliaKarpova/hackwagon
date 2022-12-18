@@ -55,7 +55,9 @@ function Login() {
         <input id='phone' onChange={onChange} name='phone' className='form-input form__phone' type='tel' />
         <label htmlFor='password' className='form__label'>Пароль</label>
         <input id='password' onChange={onChange} name='password' className='form-input form__password' type='password' />
+        <Link to='/table'>
         <button type='submit' className='form__button'>Отправить</button>
+        </Link>
       </form>
       <Link to="/workpage" className="link__to-page">Начать инвентаризацию</Link>
     </div>

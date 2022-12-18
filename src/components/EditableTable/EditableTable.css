@@ -1,3 +1,7 @@
+.table__container {
+  background: none;
+}
+
 table {
     padding: 25px;
     margin: 50px auto;
@@ -5,8 +9,10 @@ table {
 
 th {
     background-color: #1c07a4;
-    color: #EDE200;;
+    color: white;
     width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     text-align: center;
     padding: 25px;
 }

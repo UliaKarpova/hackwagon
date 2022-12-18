@@ -3,7 +3,7 @@
   color: var(--Yellow-300);
   padding: 12px;
   font-family: 'Inter';
-
+  background-color: var(--Blue-400);
 }
 
 .page__container {
