@@ -50,7 +50,7 @@ function Table() {
         <>
           <div className="table__page">
             <h1 className="table__title">Просмотр и редактирование</h1>
-            <NavLink to="/">
+            <NavLink to="/workpage">
               <button className="table__btn">Назад</button>
             </NavLink>
           </div>

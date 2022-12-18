@@ -45,7 +45,7 @@ svg {
   text-align: center;
 }
 
-.tible__buttons {
+.table__buttons {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -54,24 +54,33 @@ svg {
 
 .table__save {
   cursor: pointer;
-  height: 40px;
+  height: 50px;
   font-size: 14px;
   margin-right: 45px;
   width: 200px;
-  border-radius: 15px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--Cyan-100);
+}
+
+.table__save:hover {
+  background-color: var(--Cyan-200);
 }
 
 .download {
   cursor: pointer;
-  height: 40px;
+  height: 50px;
   background-color: #1c07a4;
   width: 200px;
-  border-radius: 15px;
+  border-radius: 25px;
+
 }
 
 .download:hover {
-  background-color: rgba(28, 7, 164, 0.7);
+  /* background-color: rgba(28, 7, 164, 0.7); */
+  opacity: .7;
 }
+
 
 .download__link {
   color: white;

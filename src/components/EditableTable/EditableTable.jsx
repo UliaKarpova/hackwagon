@@ -180,7 +180,7 @@ const EditableTable = ({ columns, rows, actions }) => {
         })}
         </tbody>
       </Table>
-      <div className='tible__buttons'>
+      <div className='table__buttons'>
         <button type='submit' className='table__save'>Сохранить изменения</button>
         <div className="col-md-4 center">
             <ExportReactCSV csvData={dataArr()} fileName='Report'/>

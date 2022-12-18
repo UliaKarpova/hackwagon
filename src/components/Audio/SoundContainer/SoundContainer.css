@@ -1,0 +1,25 @@
+.sound-container {
+  width: 400px;
+}
+
+.sound-cont__title {
+  color: var(--Cyan-100);
+  margin: 0;
+}
+
+.sound-clean__btn {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--Blue-400);
+  color: var(--Cyan-100);
+}
+
+.sound-clean__btn:hover {
+  color: var(--Cyan-200);
+}
+
+.sound-cont__text {
+  color: var(--Blue-100);
+}

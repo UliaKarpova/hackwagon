@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-import FormWithValidation from '../FormWithValidation';
-import { CurrentUserContext } from '../../contexts/CurrentUserContext';
-import { auth, getUserInfo, getUsers } from '../../utils/AuthApi';
+import FormWithValidation from '../../FormWithValidation';
+import { CurrentUserContext } from '../../../contexts/CurrentUserContext';
+import { auth, getUserInfo, getUsers } from '../../../utils/AuthApi';
 
 function Login() {
   const [currentUser, setCurrentUser] = useState({});
