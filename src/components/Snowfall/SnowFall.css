@@ -1,18 +1,9 @@
 html {
   height: 100%;
-  background: linear-gradient(#000080 30%, #736AFF);
-  overflow: hidden;
+  /* background: linear-gradient(#000080 30%, #736AFF); */
+  background: var(--Blue-400);
+  /* overflow: hidden; */
 }
-
-/* display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center; */
 
 .snow, .snow:before, .snow:after {
   position: absolute;
@@ -25,6 +16,7 @@ html {
   -webkit-animation: snow 10s linear infinite;
   animation: snow 10s linear infinite;
   content: "";
+  z-index: -10;
 }
 
 .snow:after {

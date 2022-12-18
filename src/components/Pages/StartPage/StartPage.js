@@ -7,8 +7,8 @@ function StartPage() {
     <div className="start-page">
       <div className="page__container">
         <h1 className="page__title">Лесная  инвентаризация</h1>
-        <NavLink to="/signin" className="page__link">
-          <button className="page__but" type="button">
+        <NavLink to="/signup" className="page__link">
+          <button className="page__btn" type="button">
             Начать
           </button>
         </NavLink>

@@ -1,0 +1,8 @@
+.sound {
+  width: 300px;
+  list-style: none;
+}
+
+.sound__title {
+  color: var(--Yellow-100);
+}

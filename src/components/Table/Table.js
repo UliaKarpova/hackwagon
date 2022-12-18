@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react";
 
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import './Table.css';
 import EditableTable from "../EditableTable/index";
 import { getProducts } from '../../utils/MainApi';
 
@@ -61,11 +64,15 @@ function Table() {
       ];*/
     
       return (
-          <div className="table__container">
-            <div className="start-page">
-                <h1 className="page-title">Лесная   инвентаризация</h1>
-            </div>
-            <EditableTable columns={columns} rows={data} actions />
+
+<div className="table__container">
+          <div className="table__page">
+            <h1 className="table__title">Просмотр и редактирование</h1>
+            <NavLink to="/workpage">
+              <button className="table__btn">Назад</button>
+            </NavLink>
+          </div>
+          <EditableTable columns={columns} rows={data} actions />
             
         </div>
 
